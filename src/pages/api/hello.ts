@@ -7,13 +7,13 @@ export default async function hello(req: NextApiRequest, res: NextApiResponse) {
     console.log(req.body.paymentIntent.id);
 
     // parse the request body
-    const body = JSON.parse(req.body);
+    //const body = JSON.parse(req.body);
 
     // get the message text from the request body
     //const message = body.message;
 
     // send a response
-    res.status(200).json({ body });
+    res.status(200).json({ req });
   } else {
     // handle other HTTP methods
     res.status(405).end();
