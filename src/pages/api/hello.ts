@@ -10,7 +10,7 @@ export default async function hello(req: NextApiRequest, res: NextApiResponse) {
     //const message = body.message;
 
     // send a response
-    res.status(200).json({ body });
+    res.status(200);
   } else {
     // handle other HTTP methods
     res.status(405).end();
