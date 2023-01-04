@@ -3,11 +3,14 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function hello(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
+    console.log(req);
+    console.log(req.body);
+
     // parse the request body
     const body = JSON.parse(req.body);
 
     // get the message text from the request body
-    // const message = body.message;
+    //const message = body.message;
     console.log(body);
 
     // send a response
