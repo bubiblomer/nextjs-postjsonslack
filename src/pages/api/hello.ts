@@ -13,7 +13,8 @@ export default async function hello(req: NextApiRequest, res: NextApiResponse) {
     //const message = body.message;
 
     // send a response
-    res.status(200);
+    // res.status(200).json({ req });
+    res.status(200).send('Success');
   } else {
     // handle other HTTP methods
     res.status(405).end();
