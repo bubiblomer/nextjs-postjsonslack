@@ -5,9 +5,6 @@ export default async function hello(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name } = req.body;
 
-    const testthis = JSON.parse(req.body);
-    console.log(testthis);
-
     console.log(name);
     console.log(req.body.paymentIntent.id);
 
