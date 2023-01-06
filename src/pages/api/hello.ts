@@ -8,6 +8,8 @@ export default async function hello(req: NextApiRequest, res: NextApiResponse) {
     console.log(name);
     console.log(req.body.paymentIntent.id);
 
+    console.log(req.is('application/json'));
+
     res.status(200).send('Success');
   } else {
     // handle other HTTP methods
